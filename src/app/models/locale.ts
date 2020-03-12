@@ -5,5 +5,6 @@ export interface ILocale{
     fromDate : string,
     toDate : string,
     rentedBy : string,
-    isFree : boolean
+    isFree : boolean,
+    img : string
 }

@@ -22,7 +22,7 @@
                         Rented By
                     </th>
                     <th>
-                        Occupied
+                        Available
                     </th>
                 </thead>
                 <tbody>
@@ -43,7 +43,7 @@
                             {{locale.rentedBy}}
                         </td>
                         <td>
-                            {{locale.isFree?"Yes":"No"}}
+                            <shared-available [available]='locale.isFree'></shared-available>
                         </td>
                     </tr>
                 </tbody>

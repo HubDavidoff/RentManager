@@ -11,11 +11,19 @@ import { ActivatedRoute, Router } from '@angular/router';
 export class HomePageComponent implements OnInit {
 
   locales : ILocale[];
+  errorMessage : string;
 
   constructor(private context : HomePageService, private router : Router) { }
 
   ngOnInit() {
-    this.locales = this.context.hardCoded;
+    // this.locales = this.context.hardCoded;
+    this.getData();
+  }
+
+  getData(){
+    this.context.getLocales()
+    .subscribe(data => this.locales = data,
+      error => this.errorMessage = <any>error);
   }
 
   toDetails(locale : ILocale){

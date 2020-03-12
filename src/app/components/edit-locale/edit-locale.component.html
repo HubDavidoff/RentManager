@@ -1,0 +1,67 @@
+<div class='panel panel-primary'style="margin: 50px;margin-top: 30px;width:700px">
+    <div class='panel-heading'>
+      {{pageTitle + ': ' + locale.name}}
+    </div>
+  
+    <div class='panel-body'>
+      <div class='table'>
+        <div class='col-md-8'>
+          <div class='row'>
+            <div class='col-md-4'>Name:</div>
+            <input type='text' name="editName">
+          </div>
+          <div class='row'>
+            <div class='col-md-4'>Location:</div>
+            <input type='text' name="editLoction">
+          </div>
+          <div class='row'>
+            <div class='col-md-4'>From Date:</div>
+            <input type='text' name="editFromDate">
+          </div>
+          <div class='row'>
+            <div class='col-md-4'>To Date:</div>
+            <input type='text' name="editToDate">
+          </div>
+          <div class='row'>
+            <div class='col-md-4'>Rented by:</div>
+            <input type='text' name="editRentedBy">
+          </div>
+          <div class='row'>
+            <div class='col-md-4'>Available:</div>
+            <shared-available [available]='locale.isFree'></shared-available>
+            </div>
+        </div>
+  
+        <!-- <div class='col-md-4'>
+          <img class='center-block img-responsive'
+               [style.width.px]='200'
+               [style.margin.px]='2'
+               [src]='product.imageUrl'
+               [title]='product.productName'>
+        </div> -->
+        
+      </div>
+      
+    </div>
+  
+    <div class='panel-body'>
+      <span>
+      <button class='btn btn-outline-secondary'
+              (click)='editLocale()'
+              style='width:80px'>
+        <i class='fa fa-chevron-left'></i> Edit
+      </button>
+    </span>
+    </div>
+    <div class='panel-body'>
+    <span>
+      <button class='btn btn-outline-secondary'
+              (click)='cancel()'
+              style='width:80px'>
+        <i class='fa fa-chevron-left'></i> Cancel
+      </button>
+    </span>
+  </div>
+    
+  </div>
+
