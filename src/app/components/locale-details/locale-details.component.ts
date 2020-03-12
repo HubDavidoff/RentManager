@@ -34,9 +34,19 @@ export class LocaleDetailsComponent implements OnInit {
    this.getData();
   }
 
+  delete(){
+    this.router.navigate([`/delete-locale/${this.id}`]);
+  }
+
   getData(){
     this.context.getLocale(this.id)
-    .subscribe(data => this.locale = data,
+    .subscribe(data => {this.locale = data;
+    if(this.locale.rentedBy!=null){
+      this.locale.isFree = false;
+    }else{
+      this.locale.isFree = true;
+    }
+    },
       error=> this.errorMessage = <any>error);
   }
 

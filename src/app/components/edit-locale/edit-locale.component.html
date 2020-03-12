@@ -8,23 +8,23 @@
         <div class='col-md-8'>
           <div class='row'>
             <div class='col-md-4'>Name:</div>
-            <input type='text' name="editName">
+            <input type='text' name="editName" [(ngModel)]='Name' [required]='true'>
           </div>
           <div class='row'>
             <div class='col-md-4'>Location:</div>
-            <input type='text' name="editLoction">
+            <input type='text' name="editLoction" [(ngModel)]='location'>
           </div>
           <div class='row'>
             <div class='col-md-4'>From Date:</div>
-            <input type='text' name="editFromDate">
+            <input type='text' name="editFromDate" [(ngModel)]='fromDate'>
           </div>
           <div class='row'>
             <div class='col-md-4'>To Date:</div>
-            <input type='text' name="editToDate">
+            <input type='text' name="editToDate" [(ngModel)]='toDate'>
           </div>
           <div class='row'>
             <div class='col-md-4'>Rented by:</div>
-            <input type='text' name="editRentedBy">
+            <input type='text' name="editRentedBy" [(ngModel)]='rentedBy'>
           </div>
           <div class='row'>
             <div class='col-md-4'>Available:</div>

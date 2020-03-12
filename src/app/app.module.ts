@@ -7,7 +7,9 @@ import { HomePageComponent } from './components/home-page/home-page.component';
 import { LocaleDetailsComponent } from './components/locale-details/locale-details.component';
 import { EditLocaleComponent } from './components/edit-locale/edit-locale.component';
 import { AvailableSignComponent } from './components/shared/available-sign.component';
-import { HttpClientModule } from '@angular/common/http'
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
+import { DeleteLocaleComponent } from './components/delete-locale/delete-locale.component';
 
 @NgModule({
   declarations: [
@@ -15,12 +17,14 @@ import { HttpClientModule } from '@angular/common/http'
     HomePageComponent,
     LocaleDetailsComponent,
     EditLocaleComponent,
-    AvailableSignComponent
+    AvailableSignComponent,
+    DeleteLocaleComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

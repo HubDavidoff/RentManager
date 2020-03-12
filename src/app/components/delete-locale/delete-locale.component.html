@@ -1,0 +1,22 @@
+<div>
+    <h3>Are you sure you want to delete {{locale.name}}?</h3>
+</div>
+
+<div class='panel-body'>
+    <span>
+      <button class='btn btn-outline-secondary'
+              (click)='cancel()'
+              style='width:80px'>
+        <i class='fa fa-chevron-left'></i> No
+      </button>
+    </span>
+  </div>
+  <div class='panel-body'>
+    <span>
+      <button class='btn btn-danger'
+              (click)='delete()'
+              style='width:80px'>
+        <i class='fa fa-chevron-left'></i> Yes
+      </button>
+    </span>
+  </div>

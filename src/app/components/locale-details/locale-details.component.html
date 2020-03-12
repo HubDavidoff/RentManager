@@ -28,7 +28,7 @@
         </div>
         <div class='row'>
             <div class='col-md-4'>Available:</div>
-            <div class='col-md-8'>{{locale.isFree.toString()?"Yes":"No"}}</div>
+            <div class='col-md-8'><shared-available [available]='locale.isFree'></shared-available></div>
           </div>
       </div>
 
@@ -59,6 +59,15 @@
             (click)='onEdit()'
             style='width:80px'>
       <i class='fa fa-chevron-left'></i> Edit
+    </button>
+  </span>
+</div>
+<div class='panel-body'>
+  <span>
+    <button class='btn btn-danger'
+            (click)='delete()'
+            style='width:80px'>
+      <i class='fa fa-chevron-left'></i> Delete
     </button>
   </span>
 </div>

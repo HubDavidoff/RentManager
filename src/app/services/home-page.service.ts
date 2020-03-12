@@ -23,29 +23,19 @@ export class HomePageService {
     .pipe(catchError(this.handleError));
   }
 
+  editLocale(localeToEdit : ILocale) : Observable<string>{
+    return this.http.post<string>(this.url + 'edit-locale/', {locale: localeToEdit})
+    .pipe(catchError(this.handleError));
+  }
+
+  deleteLocale(id : string) : Observable<string>{
+    return this.http.post<string>(this.url + 'delete-locale/', {id : id})
+    .pipe(catchError(this.handleError));
+  }
+
   handleError(err : HttpErrorResponse){
     let errorData = err.message + ". Hueston, we have a problem"
     return Observable.throw(errorData);
   }
 
-  hardCoded = [{
-    id : '01',
-    name : 'First Locale',
-    location : 'Skopje',
-    fromDate : '',
-    toDate : '',
-    rentedBy : '',
-    isFree : true,
-    img : ''
-  },
-  {
-    id : '02',
-    name : 'Second Locale',
-    location : 'Gostivar',
-    fromDate : '02-10-19',
-    toDate : '03-04-20',
-    rentedBy : 'Me',
-    isFree : false,
-    img : ''
-  }];
 }

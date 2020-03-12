@@ -22,7 +22,15 @@ export class HomePageComponent implements OnInit {
 
   getData(){
     this.context.getLocales()
-    .subscribe(data => this.locales = data,
+    .subscribe(data =>{ this.locales = data,
+    this.locales.forEach(element => {
+      if(element.rentedBy){
+        element.isFree = false;
+      }else{
+        element.isFree = true;
+      }
+    });
+    },
       error => this.errorMessage = <any>error);
   }
 
