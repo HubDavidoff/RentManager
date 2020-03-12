@@ -1,11 +1,13 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { HomePageComponent } from './components/home-page/home-page/home-page.component';
+import { HomePageComponent } from './components/home-page/home-page.component';
+import { LocaleDetailsComponent } from './components/locale-details/locale-details.component';
 
 
 const routes: Routes = [
 
-  {path:'index', component: HomePageComponent}
+  {path:'index', component: HomePageComponent},
+  {path:'locale-details/:id', component: LocaleDetailsComponent}
   
 ];
 

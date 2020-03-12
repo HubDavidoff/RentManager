@@ -1,0 +1,53 @@
+<div class='panel panel-primary'  style="margin: 50px;margin-top: 30px;">
+    <div class='panel-heading'>
+        All Locales
+    </div>
+    <div class='panel-body'>
+        <div class='table-responsive'>
+            <table class='table'>
+                <thead>
+                    <th>
+                        Name
+                    </th>
+                    <th>
+                        Location
+                    </th>
+                    <th>
+                        From Date
+                    </th>
+                    <th>
+                        To Date
+                    </th>
+                    <th>
+                        Rented By
+                    </th>
+                    <th>
+                        Occupied
+                    </th>
+                </thead>
+                <tbody>
+                    <tr  *ngFor='let locale of locales'>
+                        <td>
+                            <a (click)='toDetails(locale)'>{{locale.name}}</a>
+                        </td>
+                        <td>
+                            {{locale.location}}
+                        </td>
+                        <td>
+                            {{locale.fromDate}}
+                        </td>
+                        <td>
+                            {{locale.toDate}}
+                        </td>
+                        <td>
+                            {{locale.rentedBy}}
+                        </td>
+                        <td>
+                            {{locale.isFree?"Yes":"No"}}
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
